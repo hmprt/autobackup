@@ -3,6 +3,11 @@
 - Intended for use with a `.config` folder or similar
 
 ## Usage
-- Add a file called `backup_paths.txt` with a newline-delimited list of paths to git project folders to back up
+- `backup.sh <BACKUP_PATHS>` 
+- `BACKUP_PATHS` is a newline-delimited file of absolute paths to git project folders
+
+## Installation
+- Add something like the following to your user crontab with `crontab -e`: `0 12 * * * /path/to/script/backup.sh backup_paths.txt`
+- The above will run this script every day at midday
+## Notes
 - Ensure that a global github username and access token are configured
-- Clone this repo and add the above to your user crontab on whatever schedule you want
